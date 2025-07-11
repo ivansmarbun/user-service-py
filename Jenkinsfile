@@ -4,12 +4,6 @@ pipeline {
     // agent { docker { image 'python:3.9-slim-buster' } }
     agent any
 
-    environment {
-        // Define any environment variables needed for your pipeline.
-        // For pushing to a private registry later: DOCKER_REGISTRY = "myregistry.com"
-        // And ensure credentials are set up in Jenkins for the registry.
-    }
-
     stages {
         stage('Checkout') {
             steps {
