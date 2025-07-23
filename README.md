@@ -1,5 +1,15 @@
 # User Service Python Project
 
+This project is part of a simple microservices demo. It is designed to work together with the [Product Service Python Project](https://github.com/ivansmarbun/product-service-py). Both projects demonstrate how to run multiple services as microservices using Docker and Jenkins CI/CD.
+
+## Microservices Setup
+To fully experience the microservices architecture, you should clone and run both:
+
+- [User Service Python Project](this repo)
+- [Product Service Python Project](https://github.com/ivansmarbun/product-service-py)
+
+Each service runs independently in its own container. You can set up CI/CD pipelines for both projects in Jenkins, and run both containers to simulate a simple microservices environment.
+
 This project is a simple Python application designed to help you learn about Docker and set up a basic CI/CD pipeline using Jenkins.
 
 ## Features
@@ -18,6 +28,18 @@ This project is a simple Python application designed to help you learn about Doc
 ---
 
 ## Step-by-Step Installation Guide
+
+### Running Both Microservices
+Repeat the installation steps for both this project and the product-service-py project. Make sure both containers are running so they can communicate as separate services.
+
+Example (run in separate folders):
+```bash
+# For user-service-py
+docker run -d -p 8080:8080 ... myjenkins-docker
+# For product-service-py (after building its Jenkins image)
+docker run -d -p 8081:8081 ... myjenkins-docker-product
+```
+You can adjust the ports as needed to avoid conflicts.
 
 ### 1. Clone the Repository
 ```bash
